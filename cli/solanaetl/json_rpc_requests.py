@@ -23,7 +23,8 @@ def generate_get_block_by_number_json_rpc(block_numbers, include_transactions: b
             params=[block_number, {
                 'encoding': encoding,
                 'transactionDetails': 'full' if include_transactions else 'signatures',
-                'rewards': True
+                'rewards': True,
+                "maxSupportedTransactionVersion": 0
             }],
             request_id=idx
         )
